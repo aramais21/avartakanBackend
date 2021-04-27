@@ -4,7 +4,7 @@ const concertValidator = () => [
   body('name').isString().isLength({min: 3, max: 32}),
   body('group').isString().isLength({min: 3, max: 16}),
   body('genre').isString().isLength({min: 3, max: 16}),
-  body('date').isDate(),
+  body('date').isString(),
   body('price').isNumeric()
 ]
 

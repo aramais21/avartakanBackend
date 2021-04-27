@@ -18,9 +18,9 @@ const ConcertSchema = new Schema({
         default: '',
     },
     date: {
-        type: Date,
+        type: String,
         required: true,
-        default: new Date(),
+        default: '',
     },
     price: {
         type: Number,
