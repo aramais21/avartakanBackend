@@ -15,7 +15,19 @@ const SongSchema = new Schema({
         type: String,
         required: true,
         default: '',
+    },
+    group: {
+        type: String,
+        required: true,
+        default: ''
+    },
+    song: {
+        type: String,
+        required: true,
+        default: ''
     }
+}, {
+    timestamps: true
 })
 
 module.exports = model('Song',SongSchema);

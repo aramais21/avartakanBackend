@@ -8,7 +8,7 @@ route.get(
     '/',
     async (req,res) => {
         try {
-            const data = await Song.find();
+            const data = await Song.find().sort({createdAt: 'desc'});
             res.status(200).json({data});
         }
         catch (err) {
@@ -43,8 +43,8 @@ route.post(
     validate,
     async (req,res) => {
         try {
-            const {tabs, chords, lyrics} = req.body;
-            const newSong = new Song({tabs, chords, lyrics});
+            const {tabs, chords, lyrics, group, song} = req.body;
+            const newSong = new Song({tabs, chords, lyrics, group, song});
             await newSong.save();
             res.status(200).json({message: 'created a new Song'});
             return ;

@@ -8,7 +8,7 @@ route.get(
     '/',
     async (req,res) => {
         try {
-            const data = await Post.find();
+            const data = await Post.find().sort({createdAt: 'desc'});
             res.status(200).json({data});
         }
         catch (err) {

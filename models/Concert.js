@@ -27,6 +27,9 @@ const ConcertSchema = new Schema({
         required: true,
         default: 0
     }
+},
+{
+    timestamps: true
 })
 
 

@@ -17,7 +17,9 @@ const postValidator = () => [
 const songValidator = () => [
   body('tabs').isURL(),
   body('chords').isURL(),
-  body('lyrics').isString()
+  body('lyrics').isString(),
+  body('group').isString(),
+  body('song').isString(),
 ]
 
 const validate = (req, res, next) => {

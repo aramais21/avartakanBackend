@@ -16,6 +16,9 @@ const PostSchema = new Schema({
         required: true,
         default: '',
     }
+}
+,{
+    timestamps: true
 });
 
 module.exports = model('Post', PostSchema);
