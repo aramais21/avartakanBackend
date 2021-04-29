@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const config = require('config');
 const cors = require('cors');
 
-const PORT = config.get('PORT');
-const MONGO_DB_URL = config.get('MONGO_DB_URL');
+const PORT = process.env.PORT || config.get('PORT');
+const MONGO_DB_URL = process.env.MONGO_DB_URL || config.get('MONGO_DB_URL');
 
 const concertRoute = require('./routes/concertRoute');
 const postRoute = require('./routes/postRoute');
